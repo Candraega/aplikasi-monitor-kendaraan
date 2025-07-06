@@ -54,9 +54,13 @@ class User extends Authenticatable
     {
         $words = explode(' ', $this->name);
         $initials = '';
-        foreach (array_slice($words, 0, 2) as $word) {
-            $initials .= strtoupper(substr($word, 0, 1));
+
+        if (count($words) >= 2) {
+            $initials = strtoupper(substr($words[0], 0, 1) . substr($words[1], 0, 1));
+        } else {
+            $initials = strtoupper(substr($words[0], 0, 2));
         }
+
         return $initials;
     }
 
