@@ -132,7 +132,7 @@
                             <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Nama
                                 Kendaraan</label>
                             <input type="text" id="name" wire:model.defer="name" placeholder="Contoh: Toyota Avanza"
-                                class="w-full p-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 @error('name') border-red-500 @enderror"
+                                class="w-full p-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 @error('name') @enderror"
                                 required>
                             @error('name') <p class="text-red-600 text-xs mt-1">{{ $message }}</p> @enderror
                         </div>
@@ -141,7 +141,7 @@
                                 Nomor</label>
                             <input type="text" id="license_plate" wire:model.defer="license_plate"
                                 placeholder="Contoh: N 1234 ABC"
-                                class="w-full p-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 @error('license_plate') border-red-500 @enderror"
+                                class="w-full p-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 @error('license_plate') @enderror"
                                 required>
                             @error('license_plate') <p class="text-red-600 text-xs mt-1">{{ $message }}</p> @enderror
                         </div>
